@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://berger7.github.io/sitemap.xml
+Sitemap: https://berger7.github.io/sitemap.xml

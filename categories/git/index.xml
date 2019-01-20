@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Even - A super concise theme for Hugo</title>
-    <link>http://berger7.github.io/categories/git/</link>
+    <link>https://berger7.github.io/categories/git/</link>
     <description>Recent content in git on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 20 Jan 2019 16:20:52 +0800</lastBuildDate>
     
-	<atom:link href="http://berger7.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://berger7.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git Rev News 45</title>
-      <link>http://berger7.github.io/post/git-rev-news-45/</link>
+      <link>https://berger7.github.io/post/git-rev-news-45/</link>
       <pubDate>Sun, 20 Jan 2019 16:20:52 +0800</pubDate>
       
-      <guid>http://berger7.github.io/post/git-rev-news-45/</guid>
+      <guid>https://berger7.github.io/post/git-rev-news-45/</guid>
       <description></description>
     </item>
     
