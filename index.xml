@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Even - A super concise theme for Hugo</title>
+    <link>http://berger7.github.io/</link>
+    <description>Recent content on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 20 Jan 2019 16:20:52 +0800</lastBuildDate>
+    
+	<atom:link href="http://berger7.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git Rev News 45</title>
+      <link>http://berger7.github.io/post/git-rev-news-45/</link>
+      <pubDate>Sun, 20 Jan 2019 16:20:52 +0800</pubDate>
+      
+      <guid>http://berger7.github.io/post/git-rev-news-45/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim指令学习——20190120</title>
+      <link>http://berger7.github.io/post/vim-learn-20190120/</link>
+      <pubDate>Sun, 20 Jan 2019 15:58:21 +0800</pubDate>
+      
+      <guid>http://berger7.github.io/post/vim-learn-20190120/</guid>
+      <description>VIM 命令使用学习 文件内的操作 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 # 光标显示当前行:set cul# 光标显示当前列:set cuc# 光标移动到当</description>
+    </item>
+    
+    <item>
+      <title>Learn to Use Hugo</title>
+      <link>http://berger7.github.io/post/learn-to-use-hugo/</link>
+      <pubDate>Sun, 20 Jan 2019 10:42:40 +0800</pubDate>
+      
+      <guid>http://berger7.github.io/post/learn-to-use-hugo/</guid>
+      <description>学习使用hugo 安装Hugo mac安装发现实际上不用clone等一堆的操作，貌似commandtools里就有，如果没有可以执行下brew install</description>
+    </item>
+    
+  </channel>
+</rss>

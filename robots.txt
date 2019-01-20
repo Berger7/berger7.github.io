@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://berger7.github.io/sitemap.xml
