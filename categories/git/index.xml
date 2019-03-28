@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Even - A super concise theme for Hugo</title>
-    <link>https://berger7.github.io/categories/git/</link>
+    <link>http://localhost:1313/categories/git/</link>
     <description>Recent content in git on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 20 Jan 2019 16:20:52 +0800</lastBuildDate>
     
-	<atom:link href="https://berger7.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git Rev News 45</title>
-      <link>https://berger7.github.io/post/git-rev-news-45/</link>
+      <link>http://localhost:1313/post/git-rev-news-45/</link>
       <pubDate>Sun, 20 Jan 2019 16:20:52 +0800</pubDate>
       
-      <guid>https://berger7.github.io/post/git-rev-news-45/</guid>
-      <description></description>
+      <guid>http://localhost:1313/post/git-rev-news-45/</guid>
+      <description>本文来自git社区的rev news，原文地址见此 分享导读 本期内容覆盖了git社区2018年10月发生的事情. 本期延续往期的结构，根据本人阅读</description>
     </item>
     
   </channel>

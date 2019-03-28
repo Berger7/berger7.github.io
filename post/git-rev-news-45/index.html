@@ -16,17 +16,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="berger7" /><meta name="description" content="" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="berger7" /><meta name="description" content="本文来自git社区的rev news，原文地址见此 分享导读 本期内容覆盖了git社区2018年10月发生的事情. 本期延续往期的结构，根据本人阅读" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.53 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
-<link rel="canonical" href="https://berger7.github.io/post/git-rev-news-45/" />
+<link rel="canonical" href="http://localhost:1313/post/git-rev-news-45/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,25 +39,26 @@
 
 
 <meta property="og:title" content="Git Rev News 45" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="本文来自git社区的rev news，原文地址见此 分享导读 本期内容覆盖了git社区2018年10月发生的事情. 本期延续往期的结构，根据本人阅读" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://berger7.github.io/post/git-rev-news-45/" /><meta property="article:published_time" content="2019-01-20T16:20:52&#43;08:00"/>
+<meta property="og:url" content="http://localhost:1313/post/git-rev-news-45/" />
+<meta property="article:published_time" content="2019-01-20T16:20:52&#43;08:00"/>
 <meta property="article:modified_time" content="2019-01-20T16:20:52&#43;08:00"/>
 
 <meta itemprop="name" content="Git Rev News 45">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="本文来自git社区的rev news，原文地址见此 分享导读 本期内容覆盖了git社区2018年10月发生的事情. 本期延续往期的结构，根据本人阅读">
 
 
 <meta itemprop="datePublished" content="2019-01-20T16:20:52&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-20T16:20:52&#43;08:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="5173">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Git Rev News 45"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="本文来自git社区的rev news，原文地址见此 分享导读 本期内容覆盖了git社区2018年10月发生的事情. 本期延续往期的结构，根据本人阅读"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,11 +136,677 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#分享导读">分享导读</a></li>
+<li><a href="#分享正文">分享正文</a>
+<ul>
+<li><a href="#社区讨论">社区讨论</a>
+<ul>
+<li><a href="#commit-graph-is-cool">commit-graph is cool</a></li>
+</ul></li>
+<li><a href="#commit-graph的扩展">commit-graph的扩展</a>
+<ul>
+<li><a href="#什么是commit-graph">什么是commit-graph</a></li>
+<li><a href="#commit-graph的设计">commit-graph的设计</a>
+<ul>
+<li><a href="#详读设计文档">详读设计文档</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#其他新闻">其他新闻</a>
+<ul>
+<li><a href="#git-submodule-漏洞">Git submodule 漏洞</a></li>
+</ul></li>
+<li><a href="#读物">读物</a>
+<ul>
+<li><a href="#该死的git">该死的Git</a></li>
+<li><a href="#对开源软件维护者有用的20个工具">对开源软件维护者有用的20个工具</a></li>
+<li><a href="#如何高效的使用git">如何高效的使用Git</a></li>
+</ul></li>
+<li><a href="#git工具和相关网站">git工具和相关网站</a>
+<ul>
+<li><a href="#git-fire">git-fire</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
       
+
+<p>本文来自git社区的rev news，<a href="https://git.github.io/rev_news/2018/11/21/edition-45/">原文地址见此</a></p>
+
+<h2 id="分享导读">分享导读</h2>
+
+<blockquote>
+<p>本期内容覆盖了git社区2018年10月发生的事情.</p>
+</blockquote>
+
+<p>本期延续往期的结构，根据本人阅读，筛选出个人认为价值比较大的有：</p>
+
+<ol>
+<li>git commit-graph的原理概览（commit-graph如何让merge-base算的更快）</li>
+<li>git submodule漏洞的分析</li>
+<li>git误操作的6个回滚小技巧</li>
+<li>在突发情况下如何保护存在你本地的公司代码财产</li>
+<li>一些git小资讯</li>
+</ol>
+
+<p><em>声明：以下内容经过个人翻译理解后做笔记整理，内容可能有误，欢迎拍砖。</em></p>
+
+<h2 id="分享正文">分享正文</h2>
+
+<h3 id="社区讨论">社区讨论</h3>
+
+<h4 id="commit-graph-is-cool">commit-graph is cool</h4>
+
+<p>起因是社区的一个大佬Elijah上报了一个消息，这个消息首先是称赞commit-graph对大仓库在push时候的作用
+确实有效，但是他仔细调查后发现这种场景下没有彻底的解决followTags打开后变慢的根本原因，他认为变慢
+的根本原因是：<code>add_missing_tags()</code> 方法对每个tag都会调用一次<code>in_merge_bases_many()</code></p>
+
+<p>commit-graph的作者Stolee随后跟进这个问题，并打了几个小patch修复了这个问题：
+<a href="https://github.com/gitgitgadget/git/pull/60/files">修复后patch地址</a></p>
+
+<h3 id="commit-graph的扩展">commit-graph的扩展</h3>
+
+<h4 id="什么是commit-graph">什么是commit-graph</h4>
+
+<p>先说说我们啥时候会用到commit的graph：</p>
+
+<ol>
+<li>计算merge-base的时候，这个功能我们在codereview的时候会用到</li>
+<li>绘制提交的图表时候会用到（我们可以在一个仓库中执行<code>git log --graph</code>）</li>
+</ol>
+
+<p>在没有做commit-graph这个功能之前，git是通过计算oid的parents关系，然后递归的绘制一张graph，当然由于是git是
+用c编写的，所以性能对于一般仓库（提交在10w一下）还是ok的。但是对一个特别的大的仓库，比如上文一开始提到的仓库，就
+会很慢，我们用一个盒马的一个库来测试下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 在未启用commitGraph功能的时候，计算bugfix-20181221和master的merge base</span>
+<span class="o">[</span>I<span class="o">]</span> ➜ <span class="nb">time</span> git merge-base bugfix-20181221 master
+5b6d3912afce2a43f99f7ee7f259f00cd08d884c
+<span class="nv">LANG</span><span class="o">=</span>en_US git merge-base bugfix-20181221 master  <span class="m">0</span>.07s user <span class="m">0</span>.03s system <span class="m">96</span>% cpu <span class="m">0</span>.110 total
+
+<span class="c1"># 开启commitGraph的功能</span>
+<span class="o">[</span>I<span class="o">]</span> ➜ git config core.commitGraph <span class="nb">true</span>
+
+<span class="c1"># 开启commitGraph功能后再次运行</span>
+<span class="o">[</span>I<span class="o">]</span> ➜ <span class="nb">time</span> git merge-base bugfix-20181221 master
+5b6d3912afce2a43f99f7ee7f259f00cd08d884c
+<span class="nv">LANG</span><span class="o">=</span>en_US git merge-base bugfix-20181221 master  <span class="m">0</span>.01s user <span class="m">0</span>.03s system <span class="m">93</span>% cpu <span class="m">0</span>.041 total
+
+<span class="c1"># 关闭commitGraph的功能</span>
+<span class="o">[</span>I<span class="o">]</span> ➜ git config core.commitGraph <span class="nb">false</span>
+
+<span class="c1"># 关闭commitGraph功能后再次运行</span>
+<span class="o">[</span>I<span class="o">]</span> ➜ <span class="nb">time</span> git merge-base bugfix-20181221 master
+5b6d3912afce2a43f99f7ee7f259f00cd08d884c
+<span class="nv">LANG</span><span class="o">=</span>en_US git merge-base bugfix-20181221 master  <span class="m">0</span>.07s user <span class="m">0</span>.04s system <span class="m">96</span>% cpu <span class="m">0</span>.112 total</code></pre></td></tr></table>
+</div>
+</div>
+<p>时间差距基本上在一般一上，证明commitGraph对于较大仓库来说，还是非常有效的。</p>
+
+<p>对于性能🚀提升的问题，谁都免不了会非常感兴趣，因此继续详细了解下commit-graph的实现。</p>
+
+<h4 id="commit-graph的设计">commit-graph的设计</h4>
+
+<p>Git社区有个很好的习惯是，他们已实现的设计文档，都保存在仓库里，而且行文非常的简洁规范，令人钦佩。</p>
+
+<p><a href="https://github.com/git/git/blob/master/Documentation/technical/commit-graph.txt">文档地址链接附上</a></p>
+
+<h5 id="详读设计文档">详读设计文档</h5>
+
+<p>Git Commit Graph Design Notes</p>
+
+<p>git需要遍历commit图的原因，有很多，其中包括：</p>
+
+<ol>
+<li>监听和过滤提交历史</li>
+<li>计算merge base</li>
+</ol>
+
+<p>随着仓库的提交次数变多，这些遍历的操作会越来越慢。导致变慢的原因主要有下面两个：</p>
+
+<ol>
+<li>解压缩以及分析提交信息（git是压缩存储）</li>
+<li>遍历所有的图以满足拓扑排序的约束</li>
+</ol>
+
+<p>commit-graph文件是用来加速遍历提交图的数据结构。这个功能是通过core.commitGraph
+来做开关确定是否启用commitGraph的功能。默认不开启，而是使用ODB进行计算（即用oid进
+行计算）。commit-graph文件存储在.git目录下的objects/info目录下。</p>
+
+<p>The commit-graph file stores the commit graph structure along with some
+extra metadata to speed up graph walks. By listing commit OIDs in lexi-
+cographic order, we can identify an integer position for each commit and
+refer to the parents of a commit using those integer positions. We use
+binary search to find initial commits and then use the integer positions
+for fast lookups during the walk.</p>
+
+<p>A consumer may load the following info for a commit from the graph:</p>
+
+<ol>
+<li>The commit OID.</li>
+<li>The list of parents, along with their integer position.</li>
+<li>The commit date.</li>
+<li>The root tree OID.</li>
+<li>The generation number (see definition below).</li>
+</ol>
+
+<p>Values 1-4 satisfy the requirements of parse_commit_gently().</p>
+
+<p>Define the &ldquo;generation number&rdquo; of a commit recursively as follows:
+以递归的方式来定义“代数”，其定义如下：</p>
+
+<ul>
+<li>A commit with no parents (a root commit) has generation number one.
+一个没有父commit（根commit）的commit有代数为1</li>
+<li>A commit with at least one parent has generation number one more than
+the largest generation number among its parents.
+一个拥有至少一个父commit的commit的代数值是其父commit加1</li>
+</ul>
+
+<p>Equivalently, the generation number of a commit A is one more than the
+length of a longest path from A to a root commit. The recursive definition
+is easier to use for computation and observing the following property:</p>
+
+<p>等价的，commit A的代号要比从A到根commit的最长路径要多1. 这个递归的定义使得观察以下属性
+变得很方便：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">If A and B are commits with generation numbers N and M, respectively,
+and N &lt;= M, then A cannot reach B. That is, we know without searching
+that B is not an ancestor of A because it is further from a root commit
+than A.
+
+如果A和B分别用户两个代数N和M，且N&lt;=M，那么A不等到达B。
+也就是说我们不用搜索B是不是A的一个祖先就可以直接判断——不是，因为B比A距离根commit更远。
+
+Conversely, when checking if A is an ancestor of B, then we only need
+to walk commits until all commits on the walk boundary have generation
+number at most N. If we walk commits using a priority queue seeded by
+generation numbers, then we always expand the boundary commit with highest
+generation number and can easily detect the stopping condition.
+
+相反的，当需要检查A是否为B的祖先时，我们只用遍历commits直到所有的遍历边界上的commit的
+代数都比N要大或者相等。如果我们遍历的时候使用一个根据代数来插入的优先级队列（顶端总是
+最小的代数的commit），那么我们总是用最高代数来扩展边界的commit，因此可以很容易的探测到
+停止条件。</pre></td></tr></table>
+</div>
+</div>
+<p>This property can be used to significantly reduce the time it takes to
+walk commits and determine topological relationships. Without generation
+numbers, the general heuristic is the following:</p>
+
+<p>这个优先级可以用来显著的减少遍历commits和确定拓扑关系所花费的时间。如果没有代数，那么
+通常的启发式如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">If A and B are commits with commit time X and Y, respectively, and
+X &lt; Y, then A _probably_ cannot reach B.
+
+如果A和B的是两个分别在X和Y时间提交的commits，如果X&lt;Y，那么A可能不能到达B。</pre></td></tr></table>
+</div>
+</div>
+<p>This heuristic is currently used whenever the computation is allowed to
+violate topological relationships due to clock skew (such as &ldquo;git log&rdquo;
+with default order), but is not used when the topological order is
+required (such as merge base calculations, &ldquo;git log &ndash;graph&rdquo;).</p>
+
+<p>这种启发式当前被使用在，允许由于时钟差导致而导致违反拓扑关系的计算中（比如使用默认排序
+的git log），但是被要求必须以拓扑来排序的时候，这种启发式就不能被使用（如果在merge
+base的计算中、“git log &ndash;graph”）</p>
+
+<p>In practice, we expect some commits to be created recently and not stored
+in the commit graph. We can treat these commits as having &ldquo;infinite&rdquo;
+generation number and walk until reaching commits with known generation
+number.</p>
+
+<p>在实际上，我们希望一些最近被创建的commits，这些commit没有存在commit-graph文件中。
+我们当这些commits认为是拥有“无限”代数，遍历commits直到遇到已知代数的commit。</p>
+
+<p>We use the macro GENERATION_NUMBER_INFINITY = 0xFFFFFFFF to mark commits not
+in the commit-graph file. If a commit-graph file was written by a version
+of Git that did not compute generation numbers, then those commits will
+have generation number represented by the macro GENERATION_NUMBER_ZERO = 0.</p>
+
+<p>我们用GENERATION_NUMBER_INFINITY = 0xFFFFFFFF这个宏定义来标记那些不在commit-graph
+的文件。如果一个commit-graph文件是被一个没有计算代数的git版本写入的。那么这些commit的代
+数会被宏定义GENERATION_NUMBER_ZERO = 0来代替。</p>
+
+<p>Since the commit-graph file is closed under reachability, we can guarantee
+the following weaker condition on all commits:</p>
+
+<p>由于commit-graph文件在可达性下是关闭的，我们可以保证如下的弱条件在所有commits上都存在：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">If A and B are commits with generation numbers N amd M, respectively,
+and N &lt; M, then A cannot reach B.</pre></td></tr></table>
+</div>
+</div>
+<p>Note how the strict inequality differs from the inequality when we have
+fully-computed generation numbers. Using strict inequality may result in
+walking a few extra commits, but the simplicity in dealing with commits
+with generation number *INFINITY or *ZERO is valuable.</p>
+
+<p>注意，当我们有完全计算的代数时候，严格不等式和不等式的区别。使用严格不等式可能会导致遍历
+一些额外的提交，但是这对于处理*INFINITY 或者 *ZERO这种类型的代数是非常有意义的。</p>
+
+<p>We use the macro GENERATION_NUMBER_MAX = 0x3FFFFFFF to for commits whose
+generation numbers are computed to be at least this value. We limit at
+this value since it is the largest value that can be stored in the
+commit-graph file using the 30 bits available to generation numbers. This
+presents another case where a commit can have generation number equal to
+that of a parent.</p>
+
+<p>对于大于GENERATION_NUMBER_MAX = 0x3FFFFFFF这个宏标识的代数的commit，也是用的这个
+值。30bits用来存储代数，所以0x3FFFFFFF是能存储的最大值。这带来另一个问题是一个commit
+的代数可能等于他的父commit。</p>
+
+<p>Design Details</p>
+
+<ul>
+<li>The commit-graph file is stored in a file named &lsquo;commit-graph&rsquo; in the
+.git/objects/info directory. This could be stored in the info directory
+of an alternate.</li>
+<li>The core.commitGraph config setting must be on to consume graph files.</li>
+<li>The file format includes parameters for the object ID hash function,
+so a future change of hash algorithm does not require a change in format.</li>
+<li>Commit grafts and replace objects can change the shape of the commit
+history. The latter can also be enabled/disabled on the fly using
+&ndash;no-replace-objects. This leads to difficultly storing both possible
+interpretations of a commit id, especially when computing generation
+numbers. The commit-graph will not be read or written when
+replace-objects or grafts are present.
+on the fly 动态的
+这将两种情况可能导致commit id存储变难，尤其是在计算代数的时候。
+当commit grafts和替换object的时候，commit-graph不允许读写。</li>
+<li>Shallow clones create grafts of commits by dropping their parents. This
+leads the commit-graph to think those commits have generation number 1.
+If and when those commits are made unshallow, those generation numbers
+become invalid. Since shallow clones are intended to restrict the commit
+history to a very small set of commits, the commit-graph feature is less
+helpful for these clones, anyway. The commit-graph will not be read or
+written when shallow commits are present.</li>
+</ul>
+
+<p>Future Work</p>
+
+<ul>
+<li>After computing and storing generation numbers, we must make graph
+walks aware of generation numbers to gain the performance benefits they
+enable. This will mostly be accomplished by swapping a commit-date-ordered
+priority queue with one ordered by generation number. The following
+operations are important candidates:
+
+<ul>
+<li>&lsquo;log &ndash;topo-order&rsquo;</li>
+<li>&lsquo;tag &ndash;merged&rsquo;</li>
+</ul></li>
+<li>A server could provide a commit-graph file as part of the network protocol
+to avoid extra calculations by clients. This feature is only of benefit if
+the user is willing to trust the file, because verifying the file is correct
+is as hard as computing it from scratch.</li>
+</ul>
+
+<h3 id="其他新闻">其他新闻</h3>
+
+<h4 id="git-submodule-漏洞">Git submodule 漏洞</h4>
+
+<p>从源码来分析漏洞的原因</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">int</span> <span class="nf">fsck_gitmodules_fn</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">var</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">value</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">vdata</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="n">fsck_gitmodules_data</span> <span class="o">*</span><span class="n">data</span> <span class="o">=</span> <span class="n">vdata</span><span class="p">;</span>
+	<span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">subsection</span><span class="p">,</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">subsection_len</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">parse_config_key</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="s">&#34;submodule&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">subsection</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">subsection_len</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span>
+	    <span class="o">!</span><span class="n">subsection</span><span class="p">)</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="n">name</span> <span class="o">=</span> <span class="n">xmemdupz</span><span class="p">(</span><span class="n">subsection</span><span class="p">,</span> <span class="n">subsection_len</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">check_submodule_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+		<span class="n">data</span><span class="o">-&gt;</span><span class="n">ret</span> <span class="o">|=</span> <span class="n">report</span><span class="p">(</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">options</span><span class="p">,</span> <span class="n">data</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">,</span>
+				    <span class="n">FSCK_MSG_GITMODULES_NAME</span><span class="p">,</span>
+				    <span class="s">&#34;disallowed submodule name: %s&#34;</span><span class="p">,</span>
+				    <span class="n">name</span><span class="p">);</span>
+
+    <span class="cm">/* 新增的非法判断
+</span><span class="cm">    *  新增了对path和url的参数校验
+</span><span class="cm">    */</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">strcmp</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s">&#34;url&#34;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&amp;&amp;</span>
+	    <span class="n">looks_like_command_line_option</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+		<span class="n">data</span><span class="o">-&gt;</span><span class="n">ret</span> <span class="o">|=</span> <span class="n">report</span><span class="p">(</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">options</span><span class="p">,</span> <span class="n">data</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">,</span>
+				    <span class="n">FSCK_MSG_GITMODULES_URL</span><span class="p">,</span>
+				    <span class="s">&#34;disallowed submodule url: %s&#34;</span><span class="p">,</span>
+				    <span class="n">value</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">strcmp</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s">&#34;path&#34;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&amp;&amp;</span>
+	    <span class="n">looks_like_command_line_option</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+		<span class="n">data</span><span class="o">-&gt;</span><span class="n">ret</span> <span class="o">|=</span> <span class="n">report</span><span class="p">(</span><span class="n">data</span><span class="o">-&gt;</span><span class="n">options</span><span class="p">,</span> <span class="n">data</span><span class="o">-&gt;</span><span class="n">obj</span><span class="p">,</span>
+				    <span class="n">FSCK_MSG_GITMODULES_PATH</span><span class="p">,</span>
+				    <span class="s">&#34;disallowed submodule path: %s&#34;</span><span class="p">,</span>
+				    <span class="n">value</span><span class="p">);</span>
+    <span class="c1">// 结束
+</span><span class="c1"></span>
+	<span class="n">free</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><code>looks_like_command_line_option(const char *str)</code>方法的实现为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">looks_like_command_line_option</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="n">str</span> <span class="o">&amp;&amp;</span> <span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>代码上基本上可以判断出是因为对submodule的参数解析上，之前没有对-做校验，导致执行的时候被作为命令执行了。</p>
+
+<p>如何复现：</p>
+
+<h3 id="读物">读物</h3>
+
+<h4 id="该死的git">该死的Git</h4>
+
+<p><a href="http://dangitgit.com/">原文地址</a></p>
+
+<p>乍一听，以为是吐槽git，但实际是一篇教你如何处理git中错误提交的干货~</p>
+
+<p>个人感觉更像是吐槽git文档的~</p>
+
+<blockquote>
+<p>Git documentation has this chicken and egg problem where you can&rsquo;t search for how to get yourself out of a mess, unless you already know the name of the thing you need to know about in order to fix your problem.</p>
+</blockquote>
+
+<ol>
+<li><p>提交了一个严重的错误，是否有穿梭回去的时光机？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"># 第一步，查看commit的历史，reflog会展示你在仓库里所有的操作，包含所有的分支
+# 每个内容都有一个形如 HEAD@{index} 的索引值
+# 你要做的就是找到你之前没有问题的那个，记下来:)
+git reflog
+# 第二步，reset到这个索引指向的版本
+git reset HEAD@{index}
+# 这就是哆啦A梦的任意门啦</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>当已经commit以后，发现还有些东西需要修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"># 第一步，做你的修改，然后add
+git add . 
+# 第二步，修改你最后的提交，顺带还可以重新编辑下你的commit message，比如：新补充了什么东西
+git commit --amend
+# ok，新的修改已经添加到最后一个commit里了，并没有产生新的commit，一切还是那么的干净</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>发现commit message写的不尽人意，需要修改一下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git">git commit --amend</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>本来应该从master新建一个分支做修改的，结果直接提交到了master</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"># 第一步，先从master上创建一个新的分支（此时你的修改已经误提交到master上了哈）
+git branch some-new-branch-name
+# 第二步，从master上抹掉你的修改
+git reset HEAD~ --hard
+# 第三步，切换到你在第一步创建的分支
+git checkout some-new-branch-name
+# Duang，你的提交已经在这个新分支上了</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>与4类似，但这次是把修改提交了错误的分支上（本来你要提交的到已存在的feature分支，结果提交到master上了）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"># 第一步，撤回你的提交，但是要保持你这些提交是可用的，注意！！！这里区别于4中的--hard
+git reset HEAD~ --soft
+# 第二步，把你的提交推到缓存里
+git stash
+# 第三步，切换到正取的分支
+git checkout name-of-the-correct-branch
+# 第四步，从缓存里把刚才的提交内容取出来
+git stash pop
+# 第五步，在当前分支下添加修改的内容
+git add . # or add individual files
+# 第六步，愉快的做一个提交
+git commit -m &#34;your message here&#34;
+# 至此，你的改动的内容已经回到了正确的分支</code></pre></td></tr></table>
+</div>
+</div>
+<p>可能有些同学迷糊4和5有啥区别？区别在于，4是把内容从错误提交的分支转到新分支上，5是把内容从错误提交的分支转移到已存在的分支。</p>
+
+<p>咱的原则是最好不要做删除分支的操作来进行变换哈，天知道你已存在的分支是不是还有其他未提交到远端的内容呢？</p>
+
+<p>除此之外，还有哪些骚操作可以完成这个需求呢？<code>cherrry pick</code>也可以做这个功能：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git">git checkout name-of-the-correct-branch
+# grab the last commit to master
+git cherry-pick master
+# delete it from master
+git checkout master
+git reset HEAD~ --hard</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>我运行了<code>git diff</code>,居然没有反应
+明明本地有改动的内容，但是diff没有反应。</p>
+
+<p>这个是因为你本地的修改已经执行过add，进入了staged状态，如果不加<code>--staged</code>参数，diff是不会对这些文件操作的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git">git diff --staged</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>当然你也可以放弃本地</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-git" data-lang="git">cd ..
+sudo rm -r dang-git-repo-dir
+git clone https://some.github.url/dang-git-repo-dir.git
+cd dang-git-repo-dir</code></pre></td></tr></table>
+</div>
+</div>
+<p>听👂，世界都清净了&hellip;</p></li>
+</ol>
+
+<h4 id="对开源软件维护者有用的20个工具">对开源软件维护者有用的20个工具</h4>
+
+<p><a href="https://hackernoon.com/20-useful-tools-for-open-source-maintainers-ee86a09e04e5">原文链接</a></p>
+
+<p>emm，都是github上维护开源社区用的，包含常用的Travis CI, Jenkins等。在大阿里经济体内，大家用Aone就好了！</p>
+
+<p>不过有自己项目或开源项目在github上维护的，可以看下。</p>
+
+<h4 id="如何高效的使用git">如何高效的使用Git</h4>
+
+<p><a href="https://dev.to/adityasridhar/how-to-use-git-efficiently-2pfa">原文链接</a></p>
+
+<p>主要讲述git workflow的，感兴趣的可以自己读下。</p>
+
+<h3 id="git工具和相关网站">git工具和相关网站</h3>
+
+<h4 id="git-fire">git-fire</h4>
+
     </div>
 
     <div class="post-copyright">
@@ -183,7 +850,7 @@
       <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
       <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
       <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="https://berger7.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">

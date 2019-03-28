@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Even - A super concise theme for Hugo</title>
-    <link>https://berger7.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="https://berger7.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>git</title>
-      <link>https://berger7.github.io/categories/git/</link>
+      <link>http://localhost:1313/categories/git/</link>
       <pubDate>Sun, 20 Jan 2019 16:20:52 +0800</pubDate>
       
-      <guid>https://berger7.github.io/categories/git/</guid>
+      <guid>http://localhost:1313/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://berger7.github.io/categories/hugo/</link>
+      <link>http://localhost:1313/categories/hugo/</link>
       <pubDate>Sun, 20 Jan 2019 10:42:40 +0800</pubDate>
       
-      <guid>https://berger7.github.io/categories/hugo/</guid>
+      <guid>http://localhost:1313/categories/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>news</title>
-      <link>https://berger7.github.io/categories/news/</link>
+      <link>http://localhost:1313/categories/news/</link>
       <pubDate>Sun, 20 Jan 2019 16:20:52 +0800</pubDate>
       
-      <guid>https://berger7.github.io/categories/news/</guid>
+      <guid>http://localhost:1313/categories/news/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vim</title>
-      <link>https://berger7.github.io/categories/vim/</link>
+      <link>http://localhost:1313/categories/vim/</link>
       <pubDate>Sun, 20 Jan 2019 15:58:21 +0800</pubDate>
       
-      <guid>https://berger7.github.io/categories/vim/</guid>
+      <guid>http://localhost:1313/categories/vim/</guid>
       <description></description>
     </item>
     
